@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <title>How much more Trump?</title>
+        <meta name="description" content="How many more days is Donald Trump's presidency?">
+        <meta name="keywords" content="trump, president, usa, america">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        
+    </head>
+
+    <body>
+
+        <h1>How much more Trump?</h1>
+
+        <p>Days since Trump presidency started: <span id="since-start"></span></p>
+
+        <p>Days until Trump presidency is expected to end: <span id="till-end"></span></p>
+
+        <p class="percent-complete-space"><span id="percent-complete"></span>% complete.</p>
+
+        <img src="flag.png" alt="Flag of the United States of America">
+    
+    </body>
+    
+    <script>   
+        const date = new Date();
+        const trumpStart = new Date('1/20/2025');
+        const trumpEnd = new Date('1/20/2029');
+        const totalLength = Math.abs(trumpEnd - trumpStart);
+        const totalDays = Math.floor(totalLength / (1000 * 60 * 60 * 24));
+        const timeSince = Math.abs(date - trumpStart);
+        const daysSince = Math.floor(timeSince / (1000 * 60 * 60 * 24));
+        const timeLeft = Math.abs(trumpEnd - date);
+        const daysLeft = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const percentComplete = Math.floor((100 * daysSince) / totalDays);
+        document.getElementById("since-start").innerText = daysSince;
+        document.getElementById("till-end").innerText = daysLeft;
+        document.getElementById("percent-complete").innerText = percentComplete;
+        console.log(date, totalDays, daysSince, daysLeft, percentComplete);
+    </script>
+</html>

@@ -1,0 +1,26 @@
+body {
+    font-family: "Open Sans", serif;
+    text-align: center;
+    vertical-align: middle;
+    padding: 50px;
+    background-color: #eeeeee;
+}
+
+h1 {
+    margin: 150px 0px 50px 0px;
+    font-size: 4em;
+}
+
+p {
+    margin: 50px;
+    font-size: 2em;
+}
+
+img {
+    margin: 50px 0px 0px 0px;
+    max-width: 100%;
+}
+
+span#since-start, span#till-end, p.percent-complete-space {
+    font-weight: bold;
+}
